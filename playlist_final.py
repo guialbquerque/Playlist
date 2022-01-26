@@ -40,3 +40,12 @@ class Series(Program):
     def __str__(self):
         return f'Name: {self._name}\nYear: {self._year}\nSeasons: {self._season}\nLikes: {self._likes}\n'
 
+class Playlists:
+    def __init__(self, name, programs):
+        self._name = name
+        self._programs = programs
+    
+    def __getitem__(self, item):
+        print('=*'*30)
+        return self._programs[item]
+
